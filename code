@@ -1,0 +1,20 @@
+import csv
+
+def csv_read(file):
+    with open(file,'r',newline='\n') as f:
+        obj=csv.reader(f)
+        for rec in obj:
+            print(rec)
+def csv_write(file):
+    with open(file,'w') as f:
+        print("enter the contents: ")
+        obj=csv.writer(f)
+        while True:
+            line=input("Data: ")
+            obj.writerow(line)
+            ch=input("More?: ")
+            if ch in 'Nn':
+                break
+
+        
+            
